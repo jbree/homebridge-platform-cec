@@ -1,0 +1,22 @@
+{
+  "name": "homebridge-plugin-cec",
+  "version": "0.0.1",
+  "description": "A Homebridge Plugin to Control Devices over HDMI-CEC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbree/homebridge-plugin-cec.git"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "author": "Joshua Breeden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbree/homebridge-plugin-cec/issues"
+  },
+  "homepage": "https://github.com/jbree/homebridge-plugin-cec#readme"
+}
