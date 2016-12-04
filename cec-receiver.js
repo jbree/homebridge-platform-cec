@@ -3,15 +3,23 @@ var CEC = nodecec.CEC;
 
 function CECReceiver (cec) {
 
+  var currentStatus = null;
+
   /**
    * send the amp's mute status to `mute`
    * @param {Boolean}   mute mute status
    * @param {Function}  cb   callback, no parameters
    */
   this.setMute = function (mute, cb) {
+    console.log('setMute');
+
     return cecGetMute(function (currentMute) {
       if (currentMute !== mute) {
         cecToggleMute();
+      }
+      if (cb != null) {
+        console.log('setMute cb');
+        cb();
       }
     });
 
@@ -22,6 +30,8 @@ function CECReceiver (cec) {
    * @param  {Function} cb callback, receives status bool as parameter
    */
   this.getMute = function (cb) {
+    console.log('getMute');
+
     return cecGetMute(cb);
   };
 
@@ -64,6 +74,14 @@ function CECReceiver (cec) {
     cec.on('SET_SYSTEM_AUDIO_MODE', function (packet, status) {
       if (cb != null) {
         return cb(status === 1);
+      }
+    });
+
+    cec.on('SYSTEM_AUDIO_MODE_STATUS', function (packet, status) {
+      if (cb != null) {
+        if (status !== currentStatus) {
+          return cb(status === 1);
+        }
       }
     });
   };
@@ -109,6 +127,8 @@ function CECReceiver (cec) {
   function cecGetVolume (cb) {
 
     cec.once('REPORT_AUDIO_STATUS', function(packet, status) {
+      console.log('getVol report audio status');
+
       if (cb != null) {
         var currentVolume = 0x7f & status;
         console.log('volume: ' + currentVolume);
@@ -124,6 +144,8 @@ function CECReceiver (cec) {
   function cecGetMute (cb) {
 
     cec.once('REPORT_AUDIO_STATUS', function(packet, status) {
+      console.log('getMute report audio status');
+
       if (cb != null) {
         var currentMute = (0x80 & status) > 0;
         cb(currentMute);
