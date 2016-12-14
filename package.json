@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/jbree/homebridge-plugin-cec#readme",
   "dependencies": {
-    "cec-promise": "0.0.3",
+    "cec-promise": "0.0.4",
     "node-cec": "^0.1.2",
     "promise": "^7.1.1"
   }
