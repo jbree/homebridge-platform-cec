@@ -6,7 +6,7 @@ A Homebridge Plugin to Control Devices over HDMI-CEC
 homebridge-platform-cec was written with Raspberry Pi in mind. I wanted the
 ability to control my receiver's mute and volume level. After getting the
 proof-of-concept working, I thought I'd grow the scope a little bit to control
-other devices.
+other devices, so I refactored the prototype to make it more extendable(extensible?).
 
 Currently, the plugin adds a Power and a Volume accessory to homebridge, both in
 the form of, "Light," accessories. The volume is controlled by adjusting the
