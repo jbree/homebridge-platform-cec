@@ -1,6 +1,6 @@
 'use strict';
 
-const dynamic = false;
+const dynamic = true;
 
 const CECPlatformModule = require('./lib/CECPlatform');
 const CECPlatform = CECPlatformModule.CECPlatform;
