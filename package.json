@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-plugin-cec",
+  "name": "homebridge-platform-cec",
   "version": "0.0.1",
   "description": "A Homebridge Plugin to Control Devices over HDMI-CEC",
   "main": "index.js",
@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/jbree/homebridge-plugin-cec#readme",
   "dependencies": {
-    "cec-promise": "0.0.4",
+    "auto-bind": "^0.1.0",
+    "cec-promise": "0.0.*",
     "node-cec": "^0.1.2",
     "promise": "^7.1.1"
   }
