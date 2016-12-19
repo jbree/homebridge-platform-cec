@@ -2,10 +2,10 @@
 
 const dynamic = true;
 
-const CECPlatformModule = require('./lib/CECPlatform');
-const CECPlatform = CECPlatformModule.CECPlatform;
+const CecPlatformModule = require('./lib/CecPlatform');
+const CecPlatform = CecPlatformModule.CecPlatform;
 
 module.exports = function(homebridge) {
-  CECPlatformModule.setHomebridge(homebridge);
-  homebridge.registerPlatform('homebridge-cec', 'CECPlatform', CECPlatform, dynamic);
+  CecPlatformModule.setHomebridge(homebridge);
+  homebridge.registerPlatform('homebridge-platform-cec', 'CecPlatform', CecPlatform, dynamic);
 };
