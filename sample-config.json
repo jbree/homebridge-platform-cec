@@ -1,0 +1,29 @@
+{
+  "platforms": [
+    {
+      "platform": "CecPlatform",
+      "name": "CecPlatform",
+      "cecAddress": 14,
+      "devices": [
+        {
+          "name": "Sony TV",
+          "type": "TV",
+          "cecAddress": 0,
+          "services": [
+            "power"
+          ]
+        },
+        {
+          "name": "STR-DN1000",
+          "type": "Receiver",
+          "cecAddress": 5,
+          "controls": [
+            "power",
+            "volume",
+            "mute"
+          ]
+        }
+      ]
+    }
+  ]
+}
