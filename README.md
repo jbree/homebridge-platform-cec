@@ -3,7 +3,7 @@ A Homebridge Plugin to Control Devices over HDMI-CEC
 
 ## Deprecated
 
-See [https://github.com/jbree/homebridge-cec-accessory](homebridge-cec-accessory) instead.
+See [homebridge-cec-accessory](https://github.com/jbree/homebridge-cec-accessory) instead.
 ## About
 
 homebridge-platform-cec was written with Raspberry Pi in mind. I wanted the
